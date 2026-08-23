@@ -3,125 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <!-- UBAH JUDUL LAMAN JIKA PERLU -->
-  <title>Selamat Datang ke Rakan Kongsi | Laman Anda Sendiri</title>
+  <title>JustMarkets Partners | Bersama Akademi Hafizzat Rusli</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Exo:400,700italic,400italic,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- === UBAH KUNCI KESELAMATAN YANG SUDAH DAFTAR UNTUK DOMAIN ANDA === -->
+  <!-- === GANTI KUNCI KESELAMATAN ANDA NANTI SETELAH SIAP ALAMAT === -->
   <script src="https://www.google.com/recaptcha/api.js?render=GANTI_KUNCI_RECAPTCHA_ANDA_DI_SINI"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   <style>
-    * {box-sizing: border-box; margin: 0; padding: 0;}
-    body {font-family: 'Exo', sans-serif; line-height: 1.6; padding: 1rem; color: #222; background: #ffffff;}
-    h1 {font-size: clamp(1.8rem, 5vw, 2.2rem); margin: 1rem 0 1.5rem; font-weight: 700; line-height: 1.3;}
-    label {display: block; margin: 1rem 0 0.4rem; font-weight: 500;}
-    .kotak-input {width: 100%; padding: 0.8rem 2.3rem 0.8rem 0.7rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;}
-    .pembungkus-input {position: relative;}
-    .ikon-buang {position: absolute; right: 0.7rem; top: 50%; transform: translateY(-50%); cursor: pointer; color: #888;}
-    .butang-hantar {width: 100%; padding: 0.85rem; background-color: #0066cc; color: #fff; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; margin-top: 1rem;}
-    .butang-hantar:disabled {background-color: #999; cursor: not-allowed;}
-    .garis-pemisah {text-align: center; margin: 1.2rem 0; position: relative;}
-    .garis-pemisah::before {content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 1px solid #ddd; z-index: -1;}
-    .teks-pemisah {background: #fff; padding: 0 0.6rem;}
-    .pautan-google {display: inline-flex; align-items: center; justify-content: center; gap:0.5rem; width:100%; padding: 0.75rem; border: 1px solid #4285f4; color: #4285f4; border-radius: 4px; text-decoration: none; font-weight: 500;}
-    .pautan-google:hover {background:#4285f4; color:#fff;}
-    .logo-google {width:20px;height:20px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%234285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="%2334A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="%23FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="%23EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>') center/contain no-repeat;}
-    a {color: #0066cc; text-decoration: underline;}
-    .tetingkap-keselamatan {position: fixed; inset: 0; background: rgba(0,0,0,0.55); padding: 1rem; overflow-y: auto; display: none;}
-    .isi-tetingkap {background: #fff; border-radius: 6px; padding: 1.3rem; max-width: 480px; margin: auto;}
-    .butang-lulus {margin-top: 1rem; padding: 0.7rem 1.3rem; background: #28a745; color: #fff; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer;}
-    .bahagian-masuk {margin-top: 1.5rem;}
-    .perjanjian {margin-top: 1rem; font-size: 0.9rem; line-height: 1.5;}
-    footer {margin-top: 2.5rem; border-top: 1px solid #eee; padding-top: 1.2rem; font-size: 0.9rem;}
-    .pautan-kaki {margin-top: 0.5rem;}
-    .maklumat-berjaya {background: #e8f4ff; border-left:3px solid #0066cc; padding:0.8rem; margin:1rem 0; border-radius:3px; display:none;}
+    * {box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif;}
+    body {background:#ffffff; color:#111; padding:2rem 1.5rem; line-height:1.6;}
+
+    .logo-teks {font-size:2.2rem; font-weight:700; color:#2563eb; text-align:center;}
+    .sub-logo {font-size:1rem; text-align:center; letter-spacing:2px; margin-bottom:3rem;}
+    h1 {font-size:1.8rem; font-weight:600; margin-bottom:2.5rem; text-align:left;}
+
+    label {display:block; margin-bottom:0.7rem; font-weight:500; font-size:1rem;}
+    .kotak-masuk {width:100%; padding:1rem 1.2rem; font-size:1rem; border:1px solid #d1d5db; border-radius:0.5rem; margin-bottom:1.5rem;}
+    .kotak-masuk:focus {outline:none; border-color:#2563eb;}
+
+    .tombol-biru {width:100%; padding:1rem; background-color:#2563eb; color:white; border:none; border-radius:0.5rem; font-size:1.05rem; font-weight:500; margin-bottom:2rem;}
+    .tombol-biru:disabled {background-color:#93c5fd; cursor:not-allowed;}
+
+    .garis-pemisah {display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:2rem; color:#6b7280;}
+    .garis-pemisah::before,.garis-pemisah::after {content:""; height:1px; background:#e5e7eb; flex:1;}
+
+    .tombol-google {display:flex; align-items:center; justify-content:center; gap:0.7rem; width:100%; padding:0.9rem; border:1px solid #d1d5db; border-radius:0.5rem; background:white; font-size:1rem; font-weight:500; margin-bottom:2rem;}
+    .tombol-google img {height:22px; width:auto;}
+
+    .teks-tengah {text-align:center; font-size:1rem; margin-bottom:1.5rem; color:#444;}
+    .pautan-biru {color:#2563eb; text-decoration:none; font-weight:500;}
+    .pautan-biru:hover {text-decoration:underline;}
+
+    .teks-perjanjian {font-size:0.9rem; color:#555; text-align:center; line-height:1.5; margin-bottom:3rem;}
+    .bahasa-tengah {text-align:center; font-size:0.9rem; color:#666;}
   </style>
 </head>
 <body>
   <main>
-    <h1>Selamat Datang ke Rakan Kongsi Laman Anda</h1>
-    <div class="maklumat-berjaya" id="maklumatBerjaya">✅ Berjaya! Arahan pengesahan telah dihantar ke alamat emel anda.</div>
+    <div class="logo-teks">JustMarkets</div>
+    <div class="sub-logo">PARTNERS</div>
+    <h1>Selamat datang di JustMarkets Partners</h1>
 
-    <form id="borangDaftar" action="/daftar-rakan" method="post">
-      <!-- === UBAH ALAMAT TUJUAN HANTAR BORANG JIKA BERBEZA === -->
-      <input type="hidden" name="utf8" value="✓" />
-      <input type="hidden" name="token_rahsia" value="GANTI_TOKEN_KESELAMATAN_ANDA_SENDIRI" />
+    <form id="borangDaftar" action="/daftar-mitra" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" class="kotak-masuk" placeholder="Masukkan alamat email Anda" required>
 
-      <label for="alamatEmel">Alamat E-mel</label>
-      <div class="pembungkus-input">
-        <input type="email" id="alamatEmel" name="pengguna[emel]" class="kotak-input" placeholder="Masukkan alamat emel anda" maxlength="100" required />
-        <span class="ikon-buang" id="buangAlamat">✕</span>
-      </div>
+      <button type="submit" id="btnUtama" class="tombol-biru" disabled>Berikutnya</button>
 
-      <button type="submit" id="butangSeterus" class="butang-hantar" disabled>Seterusnya</button>
+      <div class="garis-pemisah">atau</div>
 
-      <div class="garis-pemisah"><span class="teks-pemisah">atau</span></div>
-
-      <!-- === UBAH ALAMAT PAUTAN LOG MASUK GOOGLE UNTUK DOMAIN ANDA === -->
-      <a href="/pengguna/masuk-google?aliran=daftar&bahasa=ms&peranan=rakan" class="pautan-google">
-        <span class="logo-google"></span> Teruskan dengan Google
+      <a href="/masuk-google?asal=daftar&bahasa=ms" class="tombol-google">
+        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Logo Google">
+        Lanjutkan dengan Google
       </a>
+
+      <p class="teks-tengah">Punya akun? <a href="#" class="pautan-biru">Masuk</a></p>
+
+      <p class="teks-perjanjian">Dengan mengklik Berikutnya, saya menyetujui <a href="#" class="pautan-biru">Ketentuan Layanan</a> dan <a href="#" class="pautan-biru">Kebijakan Privasi JustMarkets</a></p>
+
+      <!-- === NANTI GANTI KUNCI CLOUDFLARE ANDA DI SINI === -->
+      <div class="cf-turnstile" data-sitekey="GANTI_KUNCI_CLOUDFLARE_ANDA_DI_SINI"></div>
     </form>
 
-    <!-- === GANTI KUNCI CLOUDFLARE TURNSTILE YANG SUDAH DAFTAR UNTUK DOMAIN ANDA === -->
-    <div class="tetingkap-keselamatan" id="kotakSemakan">
-      <div class="isi-tetingkap">
-        <h3>Semakan Keselamatan</h3>
-        <p style="margin:1rem 0;">Sila tandakan kotak untuk meneruskan:</p>
-        <div class="cf-turnstile"
-             data-sitekey="GANTI_KUNCI_CLOUDFLARE_ANDA_DI_SINI"
-             data-callback="selepasLulusSemakan"
-             data-theme="light"
-             data-response-field="token_keselamatan"
-             data-size="flexible">
-        </div>
-        <button class="butang-lulus">Teruskan</button>
-      </div>
-    </div>
-
-    <div class="bahagian-masuk">
-      Sudah ada akaun? <a href="/masuk">Log Masuk</a>
-    </div>
-
-    <p class="perjanjian">
-      Dengan mengklik butang Seterusnya, saya bersetuju dengan <a href="/syarat-perkhidmatan.pdf" target="_blank">Syarat Perkhidmatan</a> dan <a href="/dasar-privasi.pdf" target="_blank">Dasar Privasi</a>.
-    </p>
+    <p class="bahasa-tengah">🌐 Bahasa Melayu</p>
   </main>
 
-  <footer>
-    <p>Bahasa Malaysia</p>
-    <div class="pautan-kaki">
-      <a href="/dasar-kuki.pdf" target="_blank">Kuki</a> |
-      <a href="/syarat-perkhidmatan.pdf" target="_blank">Syarat Perkhidmatan</a> |
-      <a href="/dasar-privasi.pdf" target="_blank">Dasar Privasi</a>
-    </div>
-  </footer>
-
   <script>
-    // Fungsi tetap sama, boleh gunakan pada mana-mana domain selepas kunci diganti yang sesuai
-    const inputEmel = document.getElementById('alamatEmel');
-    const butangSeterus = document.getElementById('butangSeterus');
-    const maklumatBerjaya = document.getElementById('maklumatBerjaya');
+    // Aktifkan tombol Biru segera setelah email tertulis benar
+    const inputEmail = document.getElementById('email');
+    const tombolUtama = document.getElementById('btnUtama');
+    const syaratEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    inputEmel.addEventListener('input', function() {
-      let teks = inputEmel.value.trim();
-      let formatBetul = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(teks);
-      butangSeterus.disabled = (teks === "" || !formatBetul);
+    inputEmail.addEventListener('input', function(){
+      if(syaratEmail.test(this.value.trim())){
+        tombolUtama.removeAttribute('disabled');
+      } else {
+        tombolUtama.setAttribute('disabled','disabled');
+      }
     });
-
-    document.getElementById('buangAlamat').addEventListener('click', function() {
-      inputEmel.value = ""; butangSeterus.disabled = true; maklumatBerjaya.style.display='none';
-    });
-
-    function selepasLulusSemakan(tokenDiterima) {
-      console.log('Semakan selesai untuk domain anda:', tokenDiterima);
-      document.getElementById('kotakSemakan').style.display = 'none';
-      butangSeterus.disabled = false;
-      maklumatBerjaya.style.display = 'block';
-    }
   </script>
 </body>
 </html>
