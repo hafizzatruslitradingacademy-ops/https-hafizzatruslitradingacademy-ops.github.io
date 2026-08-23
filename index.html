@@ -97,7 +97,7 @@
         <span class="nilai">$ 500,00</span>
       </div>
 
-      <!-- ✅ Tambah Saldo Pakai QR -->
+      <!-- Tambah Saldo Pakai Kode QR -->
       <div class="kotak-qr">
         <h3 style="color:#2563eb;">Tambah Saldo Cepat</h3>
         <img src="https://i.ibb.co/6cy8GJ6Z/IMG-20260821-WA0029.webp" alt="Kode QR Pembayaran">
@@ -105,10 +105,11 @@
         <p class="catatan-kecil">Setelah kirim silakan kirim bukti ke pengelola → saldo akan segera diperbarui<br>Khusus kelompok belajar perdagangan</p>
       </div>
 
-      <!-- ✅ FORMULIR PERMINTAAN TARIK DANA MUDAH DIPAKAI -->
+      <!-- Formulir Tarik Dana Terhubung Benar ke Formspree -->
       <div class="kotak-tarik">
         <h3 style="color:#2563eb; margin-bottom:1rem;">Ajukan Penarikan Dana</h3>
         <form action="https://formspree.io/f/xvkprkor" method="post">
+          <input type="hidden" name="jenis_permintaan" value="Permintaan Tarik Dana">
           <label>Nama Lengkap Pemilik Akun</label>
           <input type="text" name="nama_tarik" class="kotak-masuk" placeholder="Tulis nama lengkap sesuai rekening" required>
 
@@ -138,16 +139,24 @@
       tombolUtama.toggleAttribute('disabled', !syaratEmail.test(this.value.trim()));
     });
 
-    const borang = document.getElementById('borangDaftar');
-    borang.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(borang.action, {method:'POST', body:new FormData(borang), headers:{'Accept':'application/json'}})
-      .then(res => {
-        if(res.ok){
-          document.getElementById('bahagianDaftar').style.display='none';
-          document.getElementById('bahagianDagang').classList.add('muncul');
-          window.scrollTo({top:0,behavior:'smooth'});
-        }
+    // Semua kiriman diproses lewat Formspree, tidak ke halaman GitHub yang dilarang
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+        .then(res => {
+          if(res.ok){
+            if(form.id === 'borangDaftar'){
+              document.getElementById('bahagianDaftar').style.display='none';
+              document.getElementById('bahagianDagang').classList.add('muncul');
+              window.scrollTo({top:0,behavior:'smooth'});
+            } else {
+              alert('✅ Terima kasih! Permintaan tarik dana sudah terkirim, akan segera diproses!');
+              form.reset();
+            }
+          }
+        })
+        .catch(() => alert('Sedang diproses... silakan tunggu sebentar'));
       });
     });
   </script>
