@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>JustMarkets Partners | Bersama Akademi Hafizzat Rusli</title>
+  <title>JustMarkets Partners | Abhisat Rusli Trading Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- === GANTI KUNCI KESELAMATAN ANDA NANTI SETELAH SIAP ALAMAT === -->
-  <script src="https://www.google.com/recaptcha/api.js?render=GANTI_KUNCI_RECAPTCHA_ANDA_DI_SINI"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   <style>
@@ -17,71 +14,141 @@
     body {background:#ffffff; color:#111; padding:2rem 1.5rem; line-height:1.6;}
 
     .logo-teks {font-size:2.2rem; font-weight:700; color:#2563eb; text-align:center;}
-    .sub-logo {font-size:1rem; text-align:center; letter-spacing:2px; margin-bottom:3rem;}
-    h1 {font-size:1.8rem; font-weight:600; margin-bottom:2.5rem; text-align:left;}
+    .sub-logo {font-size:1rem; text-align:center; letter-spacing:2px; margin-bottom:0.5rem;}
+    .nama-akademi {font-size:1.1rem; color:#2563eb; text-align:center; font-weight:600; margin-bottom:1.5rem;}
+    h1 {font-size:1.6rem; font-weight:600; margin-bottom:1rem; text-align:center;}
+    h2 {font-size:1.4rem; font-weight:600; margin-bottom:1rem; text-align:center; color:#2563eb;}
+    .deskripsi {text-align:center; color:#444; margin-bottom:2rem; line-height:1.7; max-width:600px; margin-left:auto; margin-right:auto;}
 
     label {display:block; margin-bottom:0.7rem; font-weight:500; font-size:1rem;}
     .kotak-masuk {width:100%; padding:1rem 1.2rem; font-size:1rem; border:1px solid #d1d5db; border-radius:0.5rem; margin-bottom:1.5rem;}
     .kotak-masuk:focus {outline:none; border-color:#2563eb;}
+    .kotak-pesan {min-height:100px; resize:vertical;}
 
-    .tombol-biru {width:100%; padding:1rem; background-color:#2563eb; color:white; border:none; border-radius:0.5rem; font-size:1.05rem; font-weight:500; margin-bottom:2rem;}
+    .tombol-biru {width:100%; padding:1rem; background-color:#2563eb; color:white; border:none; border-radius:0.5rem; font-size:1.05rem; font-weight:500; margin-bottom:2rem; cursor:pointer;}
     .tombol-biru:disabled {background-color:#93c5fd; cursor:not-allowed;}
 
-    .garis-pemisah {display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:2rem; color:#6b7280;}
+    .garis-pemisah {display:flex; align-items:center; justify-content:center; gap:1rem; margin:2rem 0; color:#6b7280;}
     .garis-pemisah::before,.garis-pemisah::after {content:""; height:1px; background:#e5e7eb; flex:1;}
 
-    .tombol-google {display:flex; align-items:center; justify-content:center; gap:0.7rem; width:100%; padding:0.9rem; border:1px solid #d1d5db; border-radius:0.5rem; background:white; font-size:1rem; font-weight:500; margin-bottom:2rem;}
+    .tombol-google {display:flex; align-items:center; justify-content:center; gap:0.7rem; width:100%; padding:0.9rem; border:1px solid #d1d5db; border-radius:0.5rem; background:white; font-size:1rem; font-weight:500; margin-bottom:2rem; text-decoration:none; color:#111;}
     .tombol-google img {height:22px; width:auto;}
 
     .teks-tengah {text-align:center; font-size:1rem; margin-bottom:1.5rem; color:#444;}
     .pautan-biru {color:#2563eb; text-decoration:none; font-weight:500;}
     .pautan-biru:hover {text-decoration:underline;}
+    .teks-perjanjian {font-size:0.9rem; color:#555; text-align:center; line-height:1.5; margin-bottom:2rem;}
+    .catatan-kecil {font-size:0.85rem; text-align:center; color:#444; margin-top:0.7rem; font-style:italic;}
 
-    .teks-perjanjian {font-size:0.9rem; color:#555; text-align:center; line-height:1.5; margin-bottom:3rem;}
-    .bahasa-tengah {text-align:center; font-size:0.9rem; color:#666;}
+    .bahagian-berdagang {display:none; margin-top:3rem; padding:1.5rem; background:#f8fafc; border-radius:0.7rem; border:1px solid #e2e8f0;}
+    .bahagian-berdagang.muncul {display:block; animation:lembut 0.5s ease;}
+    @keyframes lembut {from{opacity:0;} to{opacity:1;}}
+
+    .bingkai-dagang {width:100%; height:420px; border:none; border-radius:0.5rem; margin-bottom:2rem; background:white;}
+    .baris-saldo {display:flex; justify-content:space-between; align-items:center; padding:1rem 1.2rem; background:#ffffff; border-radius:0.5rem; border:1px solid #e2e8f0; margin-bottom:0.8rem;}
+    .baris-saldo h3 {font-size:1rem; color:#333; font-weight:500;}
+    .baris-saldo .nilai {font-size:1.2rem; font-weight:600; color:#1e40af;}
+    .baris-untung {border-left:3px solid #16a34a;}
+    .nilai-untung {color:#16a34a; font-weight:600;}
+
+    .kotak-qr,.kotak-tarik {margin-top:2rem; padding:1.5rem; background:#eff6ff; border-radius:0.7rem; border:1px solid #bfdbfe; text-align:center;}
+    .kotak-qr img {width:200px; height:200px; border-radius:0.5rem; border:3px solid #2563eb; margin:1rem 0;}
   </style>
 </head>
 <body>
   <main>
-    <div class="logo-teks">JustMarkets</div>
-    <div class="sub-logo">PARTNERS</div>
-    <h1>Selamat datang di JustMarkets Partners</h1>
+    <div id="bahagianDaftar">
+      <div class="logo-teks">JustMarkets</div>
+      <div class="sub-logo">PARTNERS</div>
+      <div class="nama-akademi">Abhisat Rusli Trading Academy</div>
+      <h1>Selamat Datang Mulai Berdagang</h1>
+      <p class="deskripsi">Akses grafik harga bergerak langsung, pantau saldo, tambah saldo cepat & ajukan permintaan tarik dana dengan mudah.</p>
 
-    <form id="borangDaftar" action="/daftar-mitra" method="post">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" class="kotak-masuk" placeholder="Masukkan alamat email Anda" required>
+      <form id="borangDaftar" action="https://formspree.io/f/xvkprkor" method="post">
+        <label for="email">Alamat Email Anda</label>
+        <input type="email" id="email" name="email" class="kotak-masuk" placeholder="contoh:nama@email.com" required>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAEZbSOoYvhT_e8zD" style="margin-bottom:1.5rem;"></div>
+        <button type="submit" id="btnUtama" class="tombol-biru" disabled>Masuk & Lihat Akun</button>
+        <div class="garis-pemisah">atau</div>
+        <a href="#" class="tombol-google"><img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Logo Google">Lanjutkan dengan Google</a>
+        <p class="teks-tengah">Sudah terdaftar? <a href="#" class="pautan-biru">Masuk Sekarang</a></p>
+        <p class="teks-perjanjian">Dengan menekan tombol di atas, Anda menyetujui <a href="#" class="pautan-biru">Syarat Layanan</a> serta <a href="#" class="pautan-biru">Kebijakan Privasi JustMarkets</a></p>
+      </form>
+    </div>
 
-      <button type="submit" id="btnUtama" class="tombol-biru" disabled>Berikutnya</button>
+    <div id="bahagianDagang" class="bahagian-berdagang">
+      <h2>Akun & Pasar Langsung</h2>
+      <iframe class="bingkai-dagang" src="https://www.tradingview.com/embed-widget/advanced-chart/?symbol=XAUUSD&theme=light&locale=id" allowfullscreen></iframe>
 
-      <div class="garis-pemisah">atau</div>
+      <div class="baris-saldo">
+        <h3>Saldo Tersedia</h3>
+        <span class="nilai">$ 2.500,00</span>
+      </div>
+      <div class="baris-saldo">
+        <h3>Ekuitas Saat Ini</h3>
+        <span class="nilai">$ 2.628,50</span>
+      </div>
+      <div class="baris-saldo baris-untung">
+        <h3>Posisi XAUUSD</h3>
+        <span class="nilai-untung">+ $ 128,50</span>
+      </div>
+      <div class="baris-saldo">
+        <h3>Margin Digunakan</h3>
+        <span class="nilai">$ 500,00</span>
+      </div>
 
-      <a href="/masuk-google?asal=daftar&bahasa=ms" class="tombol-google">
-        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Logo Google">
-        Lanjutkan dengan Google
-      </a>
+      <!-- ✅ Tambah Saldo Pakai QR -->
+      <div class="kotak-qr">
+        <h3 style="color:#2563eb;">Tambah Saldo Cepat</h3>
+        <img src="https://i.ibb.co/6cy8GJ6Z/IMG-20260821-WA0029.webp" alt="Kode QR Pembayaran">
+        <p style="font-weight:500;">Pindai kode QR di atas untuk kirim dana</p>
+        <p class="catatan-kecil">Setelah kirim silakan kirim bukti ke pengelola → saldo akan segera diperbarui<br>Khusus kelompok belajar perdagangan</p>
+      </div>
 
-      <p class="teks-tengah">Punya akun? <a href="#" class="pautan-biru">Masuk</a></p>
+      <!-- ✅ FORMULIR PERMINTAAN TARIK DANA MUDAH DIPAKAI -->
+      <div class="kotak-tarik">
+        <h3 style="color:#2563eb; margin-bottom:1rem;">Ajukan Penarikan Dana</h3>
+        <form action="https://formspree.io/f/xvkprkor" method="post">
+          <label>Nama Lengkap Pemilik Akun</label>
+          <input type="text" name="nama_tarik" class="kotak-masuk" placeholder="Tulis nama lengkap sesuai rekening" required>
 
-      <p class="teks-perjanjian">Dengan mengklik Berikutnya, saya menyetujui <a href="#" class="pautan-biru">Ketentuan Layanan</a> dan <a href="#" class="pautan-biru">Kebijakan Privasi JustMarkets</a></p>
+          <label>Nomor Rekening / Dompet Tujuan Terima Uang</label>
+          <input type="text" name="rekening_tujuan" class="kotak-masuk" placeholder="Nama Bank + Nomor Rekening / Nomor E-Wallet" required>
 
-      <!-- === NANTI GANTI KUNCI CLOUDFLARE ANDA DI SINI === -->
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAAAEZbSOoYvhT_e8zD"></div>
+          <label>Jumlah Dana Yang Ingin Ditarik</label>
+          <input type="number" step="0.01" name="jumlah_tarik" class="kotak-masuk" placeholder="Contoh: 150.000" required>
 
-    <p class="bahasa-tengah">🌐 Bahasa Melayu</p>
+          <label>Pesan/Keterangan Tambahan</label>
+          <textarea name="keterangan" class="kotak-masuk kotak-pesan" placeholder="Tulis keterangan singkat jika ada"></textarea>
+
+          <button type="submit" class="tombol-biru">Kirim Permintaan Tarik Dana</button>
+        </form>
+        <p class="catatan-kecil">Permintaan akan diperiksa & diproses segera oleh pengelola kelompok belajar</p>
+      </div>
+
+      <p style="text-align:center; margin-top:2rem; font-size:0.9rem; color:#666;">Terhubung aman bersama JustMarkets Partners | Khusus Kelompok Belajar Perdagangan</p>
+    </div>
   </main>
 
   <script>
-    // Aktifkan tombol Biru segera setelah email tertulis benar
     const inputEmail = document.getElementById('email');
     const tombolUtama = document.getElementById('btnUtama');
     const syaratEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     inputEmail.addEventListener('input', function(){
-      if(syaratEmail.test(this.value.trim())){
-        tombolUtama.removeAttribute('disabled');
-      } else {
-        tombolUtama.setAttribute('disabled','disabled');
-      }
+      tombolUtama.toggleAttribute('disabled', !syaratEmail.test(this.value.trim()));
+    });
+
+    const borang = document.getElementById('borangDaftar');
+    borang.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(borang.action, {method:'POST', body:new FormData(borang), headers:{'Accept':'application/json'}})
+      .then(res => {
+        if(res.ok){
+          document.getElementById('bahagianDaftar').style.display='none';
+          document.getElementById('bahagianDagang').classList.add('muncul');
+          window.scrollTo({top:0,behavior:'smooth'});
+        }
+      });
     });
   </script>
 </body>
